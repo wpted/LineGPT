@@ -55,7 +55,7 @@ Verify the url to see if the service is ready.
 ### Or
 The project is deployed on Azure Container Registry and Azure App service, try by scanning the below QRCode
 
-![](LineGPT.png)
+![](static/LineGPT.png)
 
 Add the bot as friend, then, voilà!
 
