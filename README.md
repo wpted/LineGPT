@@ -10,6 +10,7 @@ LineGPT is a Line Bot that responds with OpenAI model
 Create a yaml file at root directory that looks like below
 
 ```yaml
+# LINEGPT.yaml
 ---
 # Server configurations
 server:
