@@ -1,0 +1,5 @@
+# app configurations
+LINEGPT.yaml
+
+.idea
+.DS_Store
