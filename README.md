@@ -5,16 +5,32 @@ LineGPT is a Line Bot that responds with OpenAI model
 
 ## Installation
 
-Use Docker
-
-```bash
-    docker pull wpted/line-gpt
-```
-
 ## Usage
 
+Create a yaml file at root directory that looks like below
+
+```yaml
+---
+# Server configurations
+server:
+host: "localhost"
+port: :8000
+
+services:
+# Line Bot API
+line_service:
+channel_token: Your Line Channel Access Token
+channel_secret: Your Line Channel Secret
+
+# OpenAI API
+chatgpt_service:
+key: your OpenAI token
+...
+
+```
+
 ```bash
-    docker run --rm -d -p 8000:8000 wpted/line-gpt
+    go run cmd/main.go
 ```
 
 Connect the local port to Line Messaging bot by creating a temporary connection using ngrok.
@@ -30,7 +46,9 @@ The url will look something like this
     https://8d3a-211-23-199-105.jp.ngrok.io/callback
 ```
 
-Verify the url to see the service is ready.
+![](static/webhook.png)
+
+Verify the url to see if the service is ready.
 
 
 ### Or
@@ -40,7 +58,7 @@ The project is deployed on Azure Container Registry and Azure App service, try b
 
 Add the bot as friend, then, voilà!
 
-
+![](static/sample.png)
 
 
 
